@@ -10,6 +10,240 @@
 <body>
 <img src="000867756_1-20f16066d811a3d43dc617947b4b6854.png" border=0 width=70 height=50>formularz </A>
 <br>
+  
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Zwrotu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+   .top-line {
+            width: 100%;
+            height: 1518:55 09.12.2024px;
+            background-color: #800080; /* Fioletowy kolor */
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .checkbox-group label {
+            margin-right: 20px;
+        }
+        .form-buttons {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button[type="reset"] {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<p align="left">  <font color="gray" size="2" face="Arial">  
+Natalia Kiełbska<br>
+ul. Warszawska 147 <br>
+25-547 Kielce <br>
+</font> </p>
+    <div class="form-container">
+        <h1>Formularz Zwrotu / Odstąpienia od Umowy</h1>
+<HR SIZE=7WIDTH=2000 ALIGN=LEFT COLOR=violet>
+        <form>
+
+
+            <!-- Sekcja zamówienia -->
+            <div class="form-section">
+                <label for="order-number">Numer zamówienia</label>
+                <input type="text" id="order-number" name="order-number">
+
+                <label for="order-date">Data zamówienia</label>
+                <input type="date" id="order-date" name="order-date">
+
+                <label for="name">Imię i nazwisko</label>
+                <input type="text" id="name" name="name">
+
+                <label for="address">Adres</label>
+                <input type="text" id="address" name="address">
+
+                <label for="phone">Telefon</label>
+                <input type="text" id="phone" name="phone">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+Zwrot pieniędzy na konto, z którego zakup był opłacony. <br>
+                <label for="bank">Nazwa Banku</label>
+                <input type="text" id="bank" name="bank">
+(zwrot możliwy tylko za pośrednictwe dokumentu potwierdzającego zakup) <br>
+            </div>
+ <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input {
+            width: 100%;
+            border: none;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularz zwrotu</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nazwa towaru</th>
+                <th>Ilość</th>
+                <th>Cena Brutto</th>
+                <th>Przyczyna zwrotu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="nazwa_towaru" placeholder="Wpisz nazwę towaru"></td>
+                <td><input type="number" name="ilosc" placeholder="Wpisz ilość"></td>
+                <td><input type="number" name="cena_brutto" step="0.01" placeholder="Wpisz cenę brutto"></td>
+                <td><input type="text" name="przyczyna_zwrotu" placeholder="Wpisz przyczynę zwrotu"></td>
+            </tr>
+        </tbody>
+    </table>
+   
+
+    <script>
+        function addRow() {
+            const table = document.querySelector("table tbody");
+            const newRow = document.createElement("tr");
+
+            newRow.innerHTML = `
+                <td><input type="text" name="nazwa_towaru" placeholder="Wpisz nazwę towaru"></td>
+                <td><input type="number" name="ilosc" placeholder="Wpisz ilość"></td>
+                <td><input type="number" name="cena_brutto" step="0.01" placeholder="Wpisz cenę brutto"></td>
+                <td><input type="text" name="przyczyna_zwrotu" placeholder="Wpisz przyczynę zwrotu"></td>
+            `;
+
+            table.appendChild(newRow);
+        }
+    </script>
+
+            
+
+            <!-- Uwagi klienta -->
+            <div class="form-section">
+                <label for="client-comments">Uwagi klienta</label>
+                <textarea id="client-comments" name="client-comments" rows="4"></textarea>
+            </div>
+
+            <!-- Szczegóły dodatkowe -->
+            <div class="form-section">
+                <label>Rozmiar produktu</label><br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="size" value="small"> Mały</label><br>
+                    <label><input type="checkbox" name="size" value="medium"> Średni</label><br>
+                    <label><input type="checkbox" name="size" value="large"> Duży</label> <br>
+                </div>
+
+                <label>Gwarancja</label><br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="warranty" value="none"> Brak</label><br>
+                    <label><input type="checkbox" name="warranty" value="1-6"> Stała</label><br>
+                    <label><input type="checkbox" name="warranty" value="6-12"> 6-12 lat</label> <br>
+                </div>
+
+                <label>Waga</label><br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="weight" value="0-3"> 0-3 kg</label><br>
+                    <label><input type="checkbox" name="weight" value="3-6"> 3-6 kg</label><br>
+                    <label><input type="checkbox" name="weight" value="6-10"> 6-10 kg</label> <br>
+                </div>
+
+                <label>Rodzaj wybranej dostawy</label> <br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="delivery" value="locker"> Paczkomat</label><br>
+                    <label><input type="checkbox" name="delivery" value="courier"> Kurier</label> <br>
+                </div>
+
+                <label>Dodatkowe informacje</label> <br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="info" value="glass"> Produkt szklany</label><br>
+                    <label><input type="checkbox" name="info" value="flammable"> Produkt łatwopalny</label> <br>
+                </div>
+            </div>
+
+            <!-- Podpisy -->
+            <div class="form-section">
+                <label for="signature">Podpis zwracającego</label>
+                <input type="text" id="signature" name="signature" placeholder="Podpis zwracającego...">
+
+                <label for="courier-signature">Podpis kuriera</label>
+                <input type="text" id="courier-signature" name="courier-signature" placeholder="Podpis kuriera...">
+            </div>
+
+            <!-- Przyciski -->
+            <div class="form-buttons">
+                <button type="reset" height:80px; width:150px >Resetuj</button><br>
+
+           <button onclick="alert(' wydruk ')" style="height:80px;width:300px"> Drukuj </button></TD>  <br>
+   <input type="submit" value"=Wyślij formularz" style="height:80px; width:150px"> </TD> 
+
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
 <A HREF="index.html">Wróć</A> 
 </body>
 </html>
